@@ -1,4 +1,11 @@
-<!DOCTYPE html><html lang="uk"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Elena Bykova — Офіційний Партнер</title> <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Raleway:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet"> <style>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elena Bykova — Офіційний Партнер</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Raleway:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
 :root {
   --gold: #C9A84C;
   --gold-light: #F0D080;
@@ -26,14 +33,17 @@ body {
   color: var(--gold-light);
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 a { text-decoration:none; color:inherit; }
 img { max-width:100%; display:block; }
 
-/* CURSOR - hide on mobile */
 #cursor-dot {
-  position:fixed; pointer-events:none; z-index:99999;
-  width:8px; height:8px; border-radius:50%;
+  position:fixed;
+  pointer-events:none; z-index:99999;
+  width:8px; height:8px;
+  border-radius:50%;
   background:var(--gold-bright);
   transform:translate(-50%,-50%);
   transition:transform .1s ease, opacity .2s ease;
@@ -43,19 +53,21 @@ img { max-width:100%; display:block; }
 
 #canvas-bg {
   position:fixed; top:0; left:0;
-  width:100%; height:100%;
+  width:100%;
+  height:100%;
   pointer-events:none; z-index:0;
 }
 
 .noise {
-  position:fixed; inset:0; pointer-events:none; z-index:1;
+  position:fixed; inset:0;
+  pointer-events:none; z-index:1;
   opacity:.03;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
 }
 
-/* ═══ NAVIGATION ═══ */
 nav {
-  position:fixed; top:0; left:0; right:0; z-index:1000;
+  position:fixed; top:0; left:0; right:0;
+  z-index:1000;
   display:flex; align-items:center; justify-content:space-between;
   padding:16px 24px;
   backdrop-filter:blur(20px);
@@ -85,7 +97,8 @@ nav.scrolled {
   nav.scrolled { padding:14px 60px; }
   .nav-logo { font-size:1.5rem; }
   .nav-links {
-    display:flex; gap:36px; list-style:none;
+    display:flex; gap:36px;
+    list-style:none;
   }
   .nav-links a {
     font-size:.75rem; letter-spacing:.2em; text-transform:uppercase;
@@ -94,7 +107,8 @@ nav.scrolled {
     position:relative;
   }
   .nav-links a::after {
-    content:''; position:absolute; bottom:-4px; left:0; right:0;
+    content:''; position:absolute; bottom:-4px;
+    left:0; right:0;
     height:1px; background:var(--gold);
     transform:scaleX(0); transform-origin:left;
     transition:transform .3s ease;
@@ -104,9 +118,10 @@ nav.scrolled {
 }
 .nav-cta {
   padding:9px 20px;
-  border:1px solid var(--gold);
+  border:none;
   border-radius:50px;
-  font-size:.68rem; letter-spacing:.15em; text-transform:uppercase;
+  font-size:.68rem; letter-spacing:.15em;
+  text-transform:uppercase;
   color:var(--gold-light);
   transition:all .35s;
   background:transparent;
@@ -123,7 +138,6 @@ nav.scrolled {
   .nav-cta { padding:10px 28px; font-size:.75rem; }
 }
 
-/* ═══ HERO ═══ */
 #hero {
   position:relative; z-index:2;
   min-height:100svh;
@@ -141,14 +155,12 @@ nav.scrolled {
   z-index:1;
 }
 
-/* Mobile: photo fills top, text block below */
 .hero-right {
   position:relative; z-index:2;
   width:100%;
   height:auto;
   flex-shrink:0;
   order:1;
-  background:var(--emerald-dark);
 }
 .hero-photo-full {
   width:100%;
@@ -156,7 +168,7 @@ nav.scrolled {
   display:block;
   object-fit:contain;
   border-radius:0;
-  box-shadow: 0 20px 50px rgba(4,8,10,0.55);
+  box-shadow: none;
 }
 .hero-photo-full-placeholder {
   width:100%; height:100%;
@@ -166,7 +178,8 @@ nav.scrolled {
 }
 .hero-photo-full-placeholder span {
   font-family:'Raleway',sans-serif;
-  font-size:.9rem; letter-spacing:.4em; text-transform:uppercase;
+  font-size:.9rem;
+  letter-spacing:.4em; text-transform:uppercase;
   color:rgba(201,168,76,0.35);
 }
 
@@ -179,15 +192,17 @@ nav.scrolled {
 .hero-eyebrow {
   display:inline-flex; align-items:center; gap:10px;
   padding:7px 16px;
-  border:1px solid var(--gold-dim);
+  border:none;
   border-radius:50px;
-  font-size:.65rem; letter-spacing:.2em; text-transform:uppercase;
+  font-size:.65rem; letter-spacing:.2em;
+  text-transform:uppercase;
   color:var(--gold); margin-bottom:18px;
   background:rgba(201,168,76,0.06);
   opacity:0; animation:slideRight .8s ease .3s forwards;
 }
 .hero-eyebrow::before {
-  content:''; width:5px; height:5px; border-radius:50%;
+  content:''; width:5px; height:5px;
+  border-radius:50%;
   background:var(--gold);
   box-shadow:0 0 8px var(--gold);
   animation:pulse 2s infinite;
@@ -215,7 +230,7 @@ nav.scrolled {
   flex-direction:column;
   gap:12px;
   margin-top:28px;
-  align-items:flex-start; /* LEFT aligned */
+  align-items:flex-start;
   opacity:0; animation:fadeUp .9s ease 1.3s forwards;
 }
 .btn-primary {
@@ -224,7 +239,8 @@ nav.scrolled {
   border:none; border-radius:50px;
   font-family:'Raleway',sans-serif;
   font-size:.75rem; font-weight:700;
-  letter-spacing:.15em; text-transform:uppercase;
+  letter-spacing:.15em;
+  text-transform:uppercase;
   color:var(--black); cursor:pointer;
   transition:all .35s;
   box-shadow:0 6px 24px rgba(201,168,76,0.3);
@@ -232,9 +248,11 @@ nav.scrolled {
   white-space:nowrap;
 }
 .btn-primary::after {
-  content:''; position:absolute; inset:0;
+  content:'';
+  position:absolute; inset:0;
   background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);
-  transform:translateX(-100%); transition:transform .5s;
+  transform:translateX(-100%);
+  transition:transform .5s;
 }
 .btn-primary:hover { transform:translateY(-2px); box-shadow:0 12px 40px rgba(201,168,76,0.4); }
 .btn-primary:hover::after { transform:translateX(100%); }
@@ -243,7 +261,7 @@ nav.scrolled {
 .btn-ghost {
   padding:13px 28px;
   background:transparent;
-  border:1px solid var(--gold-dim);
+  border:none;
   border-radius:50px;
   font-family:'Raleway',sans-serif;
   font-size:.75rem; font-weight:600;
@@ -257,7 +275,6 @@ nav.scrolled {
 }
 .btn-ghost:active { transform:scale(0.97); }
 
-/* Desktop hero - side by side */
 @media (min-width:768px) {
   #hero {
     display:grid;
@@ -277,17 +294,13 @@ nav.scrolled {
     height:100vh;
     max-height:none;
     min-height:unset;
-    padding:40px 40px 40px 20px;
   }
   .hero-photo-full {
     width:100%; height:100%;
     object-fit:contain;
     object-position:center center;
-    border-radius:28px;
-    box-shadow:
-      0 26px 70px rgba(4,8,10,0.55),
-      0 0 70px rgba(20,80,61,0.22),
-      0 0 44px rgba(201,168,76,0.10);
+    border-radius:0;
+    box-shadow:none;
   }
   .hero-buttons {
     flex-direction:row;
@@ -300,12 +313,11 @@ nav.scrolled {
   .hero-sub { max-width:480px; }
 }
 
-/* ═══ MARQUEE ═══ */
 .marquee-strip {
   position:relative; z-index:2;
   background:linear-gradient(90deg, var(--emerald-dark), var(--emerald-mid), var(--emerald-dark));
-  border-top:1px solid rgba(201,168,76,0.2);
-  border-bottom:1px solid rgba(201,168,76,0.2);
+  border-top:none;
+  border-bottom:none;
   padding:14px 0; overflow:hidden;
 }
 @media (min-width:768px) { .marquee-strip { margin-top:0; padding:18px 0; } }
@@ -315,17 +327,19 @@ nav.scrolled {
   white-space:nowrap;
 }
 .marquee-item {
-  display:flex; align-items:center; gap:16px;
+  display:flex; align-items:center;
+  gap:16px;
   font-size:.7rem; letter-spacing:.2em; text-transform:uppercase;
   color:var(--gold); font-weight:600; flex-shrink:0;
 }
 .marquee-item::after { content:'✦'; color:rgba(201,168,76,0.4); font-size:.55rem; }
 
-/* ═══ SECTION WRAPPER ═══ */
 .section-wrap {
-  position:relative; z-index:2;
+  position:relative;
+  z-index:2;
   padding:70px 20px;
-  max-width:1200px; margin:0 auto;
+  max-width:1200px;
+  margin:0 auto;
 }
 @media (min-width:768px) { .section-wrap { padding:100px 40px; } }
 @media (min-width:1025px) { .section-wrap { padding:120px 80px; } }
@@ -335,14 +349,14 @@ nav.scrolled {
 
 .section-eyebrow {
   font-size:.68rem; letter-spacing:.25em; text-transform:uppercase;
-  color:var(--gold); margin-bottom:14px;
-  display:flex; align-items:center; justify-content:center; gap:12px;
+  color:var(--gold);
+  margin-bottom:14px;
+  display:flex; align-items:center; justify-content:center;
+  gap:12px;
 }
 .section-eyebrow::before, .section-eyebrow::after {
-  content:''; flex:1; max-width:50px; height:1px;
-  background:linear-gradient(90deg,transparent,var(--gold));
+  display:none;
 }
-.section-eyebrow::after { background:linear-gradient(90deg,var(--gold),transparent); }
 .section-title {
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(1.9rem,8vw,3.8rem); font-weight:700;
@@ -350,16 +364,17 @@ nav.scrolled {
 }
 .section-title span {
   background:linear-gradient(135deg,var(--gold-light),var(--gold));
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
   background-clip:text;
 }
 .section-desc {
   max-width:560px; margin:16px auto 0;
   font-size:.88rem; line-height:1.9;
-  color:var(--white-dim); font-weight:300;
+  color:var(--white-dim);
+  font-weight:300;
 }
 
-/* ═══ ABOUT ═══ */
 .about-grid {
   display:grid;
   grid-template-columns:1fr;
@@ -375,29 +390,34 @@ nav.scrolled {
   width:100%; aspect-ratio:3/4;
   border-radius:20px;
   background:var(--emerald-dark);
-  border:1px solid rgba(201,168,76,0.15);
+  border:none;
   overflow:hidden;
-  display:flex; align-items:center; justify-content:center;
+  display:flex; align-items:center;
+  justify-content:center;
   font-size:80px;
   box-shadow:0 30px 80px rgba(0,0,0,0.5);
   position:relative;
 }
 .about-img-box::after {
-  content:''; position:absolute; inset:0;
+  content:''; position:absolute;
+  inset:0;
   background:linear-gradient(to top, rgba(4,8,10,0.8) 0%, transparent 50%);
 }
 .about-accent-box {
-  position:absolute; top:-16px; right:-16px;
+  position:absolute; top:-16px;
+  right:-16px;
   width:100px; height:100px;
   border-radius:18px;
   background:linear-gradient(135deg,var(--gold),#8a6010);
   display:flex; flex-direction:column;
-  align-items:center; justify-content:center;
+  align-items:center;
+  justify-content:center;
   box-shadow:0 16px 40px rgba(201,168,76,0.3);
 }
 .about-accent-box strong {
   font-family:'Cormorant Garamond',serif;
-  font-size:2rem; color:var(--black); line-height:1;
+  font-size:2rem;
+  color:var(--black); line-height:1;
 }
 .about-accent-box span { font-size:.6rem; color:rgba(0,0,0,0.55); letter-spacing:.08em; text-align:center; }
 
@@ -409,7 +429,8 @@ nav.scrolled {
 }
 .about-content h2 em { font-style:italic; font-weight:300; color:var(--gold-light); }
 .about-content p {
-  font-size:.88rem; line-height:1.9; color:var(--white-dim);
+  font-size:.88rem; line-height:1.9;
+  color:var(--white-dim);
   margin-bottom:18px; font-weight:300;
 }
 .about-values { display:flex; flex-direction:column; gap:12px; margin-top:28px; }
@@ -417,23 +438,23 @@ nav.scrolled {
   display:flex; align-items:flex-start; gap:14px;
   padding:16px 20px;
   background:var(--glass);
-  border:1px solid rgba(201,168,76,0.12);
+  border:none;
   border-radius:14px;
   backdrop-filter:blur(12px);
   transition:all .35s;
 }
-.value-item:hover { border-color:var(--gold); background:rgba(20,80,61,0.5); }
+.value-item:hover { background:rgba(20,80,61,0.5); }
 .value-icon {
   width:40px; height:40px; border-radius:10px;
   background:linear-gradient(135deg,var(--gold),#8a6010);
   display:flex; align-items:center; justify-content:center;
-  font-size:1rem; flex-shrink:0;
+  font-size:1rem;
+  flex-shrink:0;
   box-shadow:0 4px 14px rgba(201,168,76,0.25);
 }
 .value-text strong { display:block; color:var(--gold-light); font-size:.86rem; letter-spacing:.04em; margin-bottom:4px; }
 .value-text span { font-size:.8rem; color:var(--white-dim); line-height:1.55; }
 
-/* ═══ FORMATS ═══ */
 .formats-grid {
   display:grid;
   grid-template-columns:1fr;
@@ -444,7 +465,7 @@ nav.scrolled {
 
 .format-card {
   background:var(--glass);
-  border:1px solid rgba(201,168,76,0.15);
+  border:none;
   border-radius:22px;
   padding:32px 24px;
   backdrop-filter:blur(20px);
@@ -454,35 +475,42 @@ nav.scrolled {
 }
 .format-card::before {
   content:''; position:absolute;
-  top:-80px; right:-80px;
+  top:-80px;
+  right:-80px;
   width:200px; height:200px; border-radius:50%;
   background:radial-gradient(circle,rgba(201,168,76,0.1) 0%,transparent 70%);
   transition:all .4s;
 }
 .format-card::after {
   content:''; position:absolute;
-  bottom:0; left:0; right:0; height:3px;
+  bottom:0; left:0;
+  right:0; height:3px;
   background:linear-gradient(90deg,transparent,var(--gold),transparent);
-  transform:scaleX(0); transform-origin:center;
+  transform:scaleX(0);
+  transform-origin:center;
   transition:transform .4s ease;
 }
-.format-card:hover { transform:translateY(-8px); border-color:var(--gold); box-shadow:0 24px 60px rgba(0,0,0,0.4), 0 0 30px rgba(201,168,76,0.12); }
+.format-card:hover { transform:translateY(-8px);
+box-shadow:0 24px 60px rgba(0,0,0,0.4), 0 0 30px rgba(201,168,76,0.12);
+}
 .format-card:hover::after { transform:scaleX(1); }
-.format-card.featured { background:linear-gradient(145deg,rgba(20,80,61,0.6),rgba(13,59,46,0.7)); border-color:var(--gold-dim); }
+.format-card.featured { background:linear-gradient(145deg,rgba(20,80,61,0.6),rgba(13,59,46,0.7)); border:none; }
 
 .format-badge {
-  position:absolute; top:18px; right:18px;
+  position:absolute; top:18px;
+  right:18px;
   padding:4px 12px; border-radius:50px;
   font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700;
 }
 .badge-hot { background:var(--gold); color:var(--black); }
-.badge-new { background:var(--emerald-bright); color:var(--gold-light); border:1px solid var(--gold-dim); }
+.badge-new { background:var(--emerald-bright); color:var(--gold-light); border:none; }
 
 .format-number {
   font-family:'Cormorant Garamond',serif;
   font-size:3rem; font-weight:700;
   background:linear-gradient(135deg,rgba(201,168,76,0.3),rgba(201,168,76,0.1));
-  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
   background-clip:text;
   line-height:1; margin-bottom:14px;
 }
@@ -492,17 +520,19 @@ nav.scrolled {
 .format-perks li { display:flex; align-items:center; gap:9px; font-size:.8rem; color:rgba(201,168,76,0.75); }
 .format-perks li::before { content:'✦'; color:var(--gold); font-size:.62rem; }
 .format-cta {
-  padding:13px 24px; border-radius:50px; font-size:.76rem;
+  padding:13px 24px; border-radius:50px;
+  font-size:.76rem;
   letter-spacing:.16em; text-transform:uppercase; font-weight:600;
   cursor:pointer; transition:all .3s;
-  text-align:center; border:1px solid var(--gold-dim);
-  color:var(--gold-light); background:transparent;
+  text-align:center;
+  border:none;
+  color:var(--gold-light);
+  background:transparent;
   font-family:'Raleway',sans-serif; display:block;
 }
-.format-cta:hover, .format-card:hover .format-cta { background:var(--gold); color:var(--black); border-color:var(--gold); }
+.format-cta:hover, .format-card:hover .format-cta { background:var(--gold); color:var(--black); }
 .format-cta.primary-cta { background:linear-gradient(135deg,var(--gold-light),var(--gold)); color:var(--black); border:none; }
 
-/* ═══ WHO ═══ */
 .who-bento {
   display:grid;
   grid-template-columns:1fr;
@@ -513,7 +543,7 @@ nav.scrolled {
 
 .who-card {
   background:var(--glass);
-  border:1px solid rgba(201,168,76,0.12);
+  border:none;
   border-radius:18px;
   padding:26px 22px;
   backdrop-filter:blur(16px);
@@ -521,9 +551,11 @@ nav.scrolled {
   position:relative; overflow:hidden;
 }
 .who-card::before {
-  content:''; position:absolute;
+  content:'';
+  position:absolute;
   bottom:-40px; left:-40px;
-  width:120px; height:120px; border-radius:50%;
+  width:120px;
+  height:120px; border-radius:50%;
   transition:all .5s ease;
 }
 .who-card:nth-child(1)::before { background:radial-gradient(circle,rgba(201,168,76,0.1) 0%,transparent 70%); }
@@ -532,7 +564,7 @@ nav.scrolled {
 .who-card:nth-child(4)::before { background:radial-gradient(circle,rgba(26,107,82,0.2) 0%,transparent 70%); }
 .who-card:nth-child(5)::before { background:radial-gradient(circle,rgba(201,168,76,0.12) 0%,transparent 70%); }
 .who-card:nth-child(6)::before { background:radial-gradient(circle,rgba(13,59,46,0.3) 0%,transparent 70%); }
-.who-card:hover { transform:translateY(-4px); border-color:rgba(201,168,76,0.35); box-shadow:0 16px 50px rgba(0,0,0,0.3); }
+.who-card:hover { transform:translateY(-4px); box-shadow:0 16px 50px rgba(0,0,0,0.3); }
 .who-card:hover::before { transform:scale(3); }
 .who-card.wide { grid-column:span 1; }
 @media (min-width:500px) { .who-card.wide { grid-column:span 2; } }
@@ -541,7 +573,7 @@ nav.scrolled {
 .who-emoji-icon {
   width:46px; height:46px; border-radius:12px;
   background:rgba(201,168,76,0.08);
-  border:1px solid rgba(201,168,76,0.2);
+  border:none;
   display:flex; align-items:center; justify-content:center;
   margin-bottom:16px;
 }
@@ -550,12 +582,12 @@ nav.scrolled {
 .who-tag {
   display:inline-block; margin-top:14px;
   padding:4px 12px;
-  border:1px solid var(--gold-dim); border-radius:50px;
-  font-size:.68rem; letter-spacing:.12em; text-transform:uppercase;
+  border:none; border-radius:50px;
+  font-size:.68rem; letter-spacing:.12em;
+  text-transform:uppercase;
   color:var(--gold);
 }
 
-/* ═══ PRODUCTS ═══ */
 .products-carousel {
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -579,8 +611,10 @@ nav.scrolled {
 }
 .product-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
 .product-placeholder {
-  position:absolute; inset:0; width:100%; height:100%;
-  display:flex; align-items:center; justify-content:center;
+  position:absolute;
+  inset:0; width:100%; height:100%;
+  display:flex;
+  align-items:center; justify-content:center;
   background:linear-gradient(135deg,var(--emerald-mid),var(--emerald-dark));
   font-family:'Cormorant Garamond',serif;
   font-size:.9rem; letter-spacing:.18em; text-transform:uppercase;
@@ -589,7 +623,8 @@ nav.scrolled {
 .product-discount {
   position:absolute; top:10px; right:10px; z-index:1;
   padding:4px 10px; border-radius:50px;
-  background:var(--gold); color:var(--black);
+  background:var(--gold);
+  color:var(--black);
   font-size:.65rem; font-weight:700;
 }
 .product-info { padding:14px 4px; }
@@ -599,15 +634,17 @@ nav.scrolled {
 .price-new { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:700; color:var(--gold-light); }
 .price-old { font-size:.78rem; color:var(--white-faint); text-decoration:line-through; }
 
-/* ═══ STEPS ═══ */
 .steps-timeline {
   position:relative;
-  display:flex; flex-direction:column; gap:0;
+  display:flex; flex-direction:column;
+  gap:0;
   max-width:700px; margin:0 auto;
 }
 .steps-timeline::before {
-  content:''; position:absolute;
-  left:30px; top:60px; bottom:60px; width:1px;
+  content:'';
+  position:absolute;
+  left:30px; top:60px; bottom:60px;
+  width:1px;
   background:linear-gradient(to bottom,transparent,var(--gold-dim),var(--gold-dim),transparent);
 }
 @media (min-width:768px) { .steps-timeline::before { left:35px; } }
@@ -622,23 +659,25 @@ nav.scrolled {
 .step-item.visible { opacity:1; transform:none; }
 
 .step-num {
-  width:60px; height:60px; border-radius:50%; flex-shrink:0;
+  width:60px;
+  height:60px; border-radius:50%; flex-shrink:0;
   background:var(--glass);
-  border:1px solid rgba(201,168,76,0.25);
-  display:flex; align-items:center; justify-content:center;
+  border:none;
+  display:flex;
+  align-items:center; justify-content:center;
   font-family:'Cormorant Garamond',serif;
   font-size:1.4rem; font-weight:700; color:var(--gold-light);
-  position:relative; z-index:1;
+  position:relative;
+  z-index:1;
   transition:all .4s;
   backdrop-filter:blur(10px);
 }
 @media (min-width:768px) { .step-num { width:70px; height:70px; font-size:1.6rem; } }
-.step-item:hover .step-num { background:linear-gradient(135deg,var(--gold),#8a6010); color:var(--black); border-color:var(--gold); box-shadow:0 8px 28px rgba(201,168,76,0.3); }
+.step-item:hover .step-num { background:linear-gradient(135deg,var(--gold),#8a6010); color:var(--black); box-shadow:0 8px 28px rgba(201,168,76,0.3); }
 .step-content { padding-top:8px; flex:1; }
 .step-content h3 { font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:var(--gold-light); margin-bottom:6px; }
 .step-content p { font-size:.85rem; line-height:1.75; color:var(--white-dim); }
 
-/* ═══ TESTIMONIALS ═══ */
 .testimonials-grid {
   display:grid;
   grid-template-columns:1fr;
@@ -649,13 +688,13 @@ nav.scrolled {
 
 .testimonial-card {
   background:var(--glass);
-  border:1px solid rgba(201,168,76,0.12);
+  border:none;
   border-radius:18px; overflow:hidden;
   backdrop-filter:blur(16px);
   transition:all .4s;
   position:relative;
 }
-.testimonial-card:hover { transform:translateY(-4px); border-color:rgba(201,168,76,0.3); box-shadow:0 16px 50px rgba(0,0,0,0.3); }
+.testimonial-card:hover { transform:translateY(-4px); box-shadow:0 16px 50px rgba(0,0,0,0.3); }
 .testimonial-card img { width:100%; height:auto; display:block; border-radius:10px; margin-top:0; }
 .stars { display:flex; gap:4px; padding:20px 20px 0; }
 .star { color:var(--gold); font-size:.85rem; }
@@ -663,19 +702,18 @@ nav.scrolled {
 .author-name { font-size:.86rem; font-weight:600; color:var(--gold-light); padding:14px 20px 20px; }
 .author-role { font-size:.72rem; color:var(--gold); }
 
-/* ═══ FAQ ═══ */
 .faq-list { max-width:800px; margin:0 auto; display:flex; flex-direction:column; gap:10px; }
 .faq-item {
   background:var(--glass);
-  border:1px solid rgba(201,168,76,0.12);
+  border:none;
   border-radius:14px; overflow:hidden;
   backdrop-filter:blur(12px);
   transition:border-color .3s;
 }
-.faq-item.open { border-color:rgba(201,168,76,0.35); }
 .faq-question {
   padding:20px 22px;
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex;
+  align-items:center; justify-content:space-between;
   cursor:pointer; gap:16px;
   font-size:.88rem; font-weight:500; color:var(--gold-light);
   -webkit-tap-highlight-color:transparent;
@@ -684,7 +722,8 @@ nav.scrolled {
 .faq-icon {
   width:26px; height:26px; border-radius:50%;
   border:1px solid var(--gold-dim);
-  display:flex; align-items:center; justify-content:center;
+  display:flex; align-items:center;
+  justify-content:center;
   flex-shrink:0; color:var(--gold); font-size:.95rem;
   transition:transform .3s, background .3s;
 }
@@ -693,7 +732,6 @@ nav.scrolled {
 .faq-answer-inner { padding-bottom:20px; font-size:.86rem; line-height:1.85; color:var(--white-dim); border-top:1px solid rgba(201,168,76,0.1); padding-top:18px; }
 .faq-item.open .faq-answer { max-height:300px; }
 
-/* ═══ FORM SECTION ═══ */
 .form-contacts {
   display:flex;
   flex-direction:column;
@@ -713,7 +751,7 @@ nav.scrolled {
   gap:0;
   padding:52px 32px;
   background:var(--glass);
-  border:1px solid rgba(201,168,76,0.18);
+  border:none;
   border-radius:28px;
   backdrop-filter:blur(24px);
   box-shadow:0 30px 80px rgba(0,0,0,0.3);
@@ -737,7 +775,8 @@ nav.scrolled {
   border:none; border-radius:50px;
   font-family:'Raleway',sans-serif;
   font-size:.88rem; font-weight:700;
-  letter-spacing:.18em; text-transform:uppercase;
+  letter-spacing:.18em;
+  text-transform:uppercase;
   color:var(--black); cursor:pointer;
   transition:all .35s;
   box-shadow:0 10px 36px rgba(201,168,76,0.35);
@@ -765,12 +804,14 @@ nav.scrolled {
 }
 
 .gform-wrap {
-  max-width:800px; margin:0 auto; position:relative;
+  max-width:800px;
+  margin:0 auto; position:relative;
 }
 .gform-wrap iframe {
-  width:100%; display:block; min-height:700px;
+  width:100%;
+  display:block; min-height:700px;
   border-radius:20px;
-  border:1px solid rgba(201,168,76,0.2) !important;
+  border:none !important;
   background:var(--emerald-dark);
   box-shadow:0 30px 80px rgba(0,0,0,0.35);
 }
@@ -778,7 +819,7 @@ nav.scrolled {
   margin-top:20px;
   padding:14px 18px;
   background:rgba(201,168,76,0.06);
-  border:1px solid rgba(201,168,76,0.18);
+  border:none;
   border-radius:12px;
   font-size:.76rem;
   color:var(--white-dim);
@@ -788,40 +829,43 @@ nav.scrolled {
 .gform-hint code {
   background:rgba(201,168,76,0.12);
   padding:2px 7px; border-radius:5px;
-  font-size:.74rem; color:var(--gold-light);
+  font-size:.74rem;
+  color:var(--gold-light);
   word-break:break-all;
 }
 .contact-item {
   display:flex; align-items:center; gap:12px;
   padding:14px 18px;
   background:var(--glass);
-  border:1px solid rgba(201,168,76,0.12);
+  border:none;
   border-radius:12px; transition:all .3s;
 }
-.contact-item:hover { border-color:var(--gold); background:var(--glass3); }
+.contact-item:hover { background:var(--glass3); }
 .contact-icon {
   width:36px; height:36px; border-radius:10px;
   background:linear-gradient(135deg,var(--gold),#8a6010);
   display:flex; align-items:center; justify-content:center;
-  font-size:.95rem; flex-shrink:0;
+  font-size:.95rem;
+  flex-shrink:0;
 }
 .contact-info strong { display:block; font-size:.83rem; color:var(--gold-light); }
 .contact-info span { font-size:.76rem; color:var(--gold); }
 
-/* ═══ CTA BANNER ═══ */
 #cta-banner {
-  position:relative; z-index:2;
+  position:relative;
+  z-index:2;
   padding:80px 24px;
   background:linear-gradient(135deg,var(--emerald-dark) 0%,rgba(20,80,61,0.8) 50%,var(--emerald-dark) 100%);
-  border-top:1px solid rgba(201,168,76,0.15);
-  border-bottom:1px solid rgba(201,168,76,0.15);
+  border-top:none;
+  border-bottom:none;
   overflow:hidden; text-align:center;
 }
 @media (min-width:768px) { #cta-banner { padding:100px 80px; } }
 #cta-banner::before {
   content:''; position:absolute;
   top:50%; left:50%; transform:translate(-50%,-50%);
-  width:400px; height:400px; border-radius:50%;
+  width:400px;
+  height:400px; border-radius:50%;
   background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 70%);
   animation:pulseGlow 4s ease-in-out infinite;
 }
@@ -829,18 +873,18 @@ nav.scrolled {
 .cta-title {
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(2rem,9vw,5rem); font-weight:700;
-  line-height:1.05; margin-bottom:16px;
+  line-height:1.05;
+  margin-bottom:16px;
 }
 .cta-title em { font-style:italic; font-weight:300; color:var(--gold-light); }
 .cta-sub { font-size:.9rem; color:var(--white-dim); max-width:460px; margin:0 auto 32px; line-height:1.75; }
 .cta-buttons { display:flex; flex-direction:column; gap:12px; align-items:center; }
 @media (min-width:480px) { .cta-buttons { flex-direction:row; justify-content:center; } }
 
-/* ═══ FOOTER ═══ */
 footer {
   position:relative; z-index:2;
   background:var(--black);
-  border-top:1px solid rgba(201,168,76,0.08);
+  border-top:none;
   padding:60px 24px 32px;
 }
 @media (min-width:768px) { footer { padding:80px 40px 40px; } }
@@ -856,7 +900,8 @@ footer {
 
 .footer-logo {
   font-family:'Raleway',sans-serif;
-  font-size:1.7rem; font-weight:700;
+  font-size:1.7rem;
+  font-weight:700;
   background:linear-gradient(135deg,var(--gold-light),var(--gold));
   -webkit-background-clip:text; -webkit-text-fill-color:transparent;
   background-clip:text; margin-bottom:14px;
@@ -865,13 +910,15 @@ footer {
 .footer-socials { display:flex; gap:10px; margin-top:22px; }
 .social-btn {
   width:40px; height:40px; border-radius:50%;
-  border:1px solid rgba(201,168,76,0.2);
-  display:flex; align-items:center; justify-content:center;
+  border:none;
+  display:flex;
+  align-items:center; justify-content:center;
   font-size:1rem; color:var(--white-dim);
   transition:all .3s; cursor:pointer;
-  background:var(--glass); text-decoration:none;
+  background:var(--glass);
+  text-decoration:none;
 }
-.social-btn:hover { border-color:var(--gold); color:var(--gold-light); background:var(--gold-glow); }
+.social-btn:hover { color:var(--gold-light); background:var(--gold-glow); }
 .footer-col h4 { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; font-weight:600; }
 .footer-links { list-style:none; display:flex; flex-direction:column; gap:10px; }
 .footer-links a { font-size:.83rem; color:var(--white-dim); transition:color .3s; }
@@ -879,13 +926,14 @@ footer {
 .footer-bottom {
   padding-top:24px;
   border-top:1px solid rgba(255,255,255,0.05);
-  display:flex; flex-direction:column; align-items:center; gap:8px;
-  font-size:.72rem; color:rgba(255,255,255,0.25); text-align:center;
+  display:flex;
+  flex-direction:column; align-items:center; gap:8px;
+  font-size:.72rem;
+  color:rgba(255,255,255,0.25); text-align:center;
 }
 @media (min-width:600px) { .footer-bottom { flex-direction:row; justify-content:space-between; } }
 .footer-bottom .gold { color:var(--gold); }
 
-/* ═══ DIVIDERS ═══ */
 .divider {
   position:relative; z-index:2; height:1px;
   background:linear-gradient(90deg,transparent,rgba(201,168,76,0.25),transparent);
@@ -894,14 +942,14 @@ footer {
   position:relative; z-index:2; text-align:center; padding:16px 0;
 }
 .divider-ornament::before, .divider-ornament::after {
-  content:''; position:absolute; top:50%; width:calc(50% - 36px); height:1px;
+  content:''; position:absolute; top:50%;
+  width:calc(50% - 36px); height:1px;
   background:linear-gradient(90deg,transparent,rgba(201,168,76,0.2));
 }
 .divider-ornament::before { left:0; }
 .divider-ornament::after { right:0; background:linear-gradient(90deg,rgba(201,168,76,0.2),transparent); }
 .divider-ornament span { font-size:.75rem; color:var(--gold-dim); letter-spacing:.36em; position:relative; }
 
-/* ═══ REVEAL ANIMATIONS ═══ */
 .reveal { opacity:0; transform:translateY(32px); transition:opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity:1; transform:none; }
 .reveal-left { opacity:0; transform:translateX(-32px); transition:opacity .7s ease, transform .7s ease; }
@@ -909,7 +957,6 @@ footer {
 .reveal-right { opacity:0; transform:translateX(32px); transition:opacity .7s ease, transform .7s ease; }
 .reveal-right.visible { opacity:1; transform:none; }
 
-/* ═══ LOADER ═══ */
 #loader {
   position:fixed; inset:0; z-index:99999;
   background:var(--black);
@@ -933,24 +980,23 @@ footer {
   animation:loadProgress 1.5s ease forwards;
 }
 
-/* ═══ PHOTO PLACEHOLDERS ═══ */
 .photo-placeholder {
-  width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+  width:100%; height:100%; display:flex; align-items:center;
+  justify-content:center;
   background:linear-gradient(135deg,var(--emerald-mid),var(--emerald-dark));
 }
 .photo-placeholder span {
   font-family:'Cormorant Garamond',serif;
   font-size:1rem; letter-spacing:.36em; text-transform:uppercase;
-  color:rgba(201,168,76,0.45); font-weight:300;
+  color:rgba(201,168,76,0.45);
+  font-weight:300;
 }
 
-/* ═══ SCROLLBAR ═══ */
 ::-webkit-scrollbar { width:4px; }
 ::-webkit-scrollbar-track { background:var(--black); }
 ::-webkit-scrollbar-thumb { background:var(--gold-dim); border-radius:3px; }
 ::-webkit-scrollbar-thumb:hover { background:var(--gold); }
 
-/* ═══ KEYFRAMES ═══ */
 @keyframes fadeUp { to{opacity:1;transform:none} }
 @keyframes fadeIn { to{opacity:1} }
 @keyframes slideRight { from{opacity:0;transform:translateX(-18px)} to{opacity:1;transform:none} }
@@ -959,22 +1005,275 @@ footer {
 @keyframes pulseGlow { 0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.6} 50%{transform:translate(-50%,-50%) scale(1.2);opacity:1} }
 @keyframes loadProgress { from{width:0} to{width:100%} }
 @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+
+/* ═══ MOBILE PHOTO & LAYOUT FIXES ═══ */
+@media (max-width: 767px) {
+  #hero {
+    min-height: unset !important;
+    overflow: hidden !important;
+  }
+  .hero-right {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    outline: none !important;
+  }
+  .hero-photo-full {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  .hero-left {
+    padding: 24px 16px 40px !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+  .hero-title {
+    font-size: clamp(2.2rem, 14vw, 4rem) !important;
+    word-break: break-word !important;
+    padding-top: 0 !important;
+  }
+  .hero-sub {
+    font-size: clamp(.78rem, 3.8vw, .95rem) !important;
+  }
+  .hero-buttons {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .btn-primary, .btn-ghost {
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  .section-title {
+    font-size: clamp(1.5rem, 7.5vw, 2.4rem) !important;
+    overflow-wrap: break-word !important;
+  }
+  .section-wrap {
+    padding: 50px 16px !important;
+    overflow-x: hidden !important;
+  }
+  .format-card {
+    padding: 24px 18px !important;
+  }
+  nav {
+    padding: 14px 16px !important;
+  }
+  .form-cta-block {
+    padding: 36px 16px !important;
+  }
+  .form-open-btn {
+    font-size: .75rem !important;
+    padding: 14px 24px !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+  .form-contacts {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .contact-item {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  footer {
+    padding: 50px 16px 28px !important;
+  }
+  .footer-grid {
+    gap: 28px !important;
+  }
+  .products-carousel {
+    gap: 10px !important;
+    padding: 0 !important;
+  }
+  .gform-hint {
+    font-size: .72rem !important;
+    word-break: break-word !important;
+  }
+}
+
+
+/* ═══ PAGE 2 FORM ═══ */
+#page2 {
+  display: none;
+  min-height: 100vh;
+  background: var(--black);
+  padding: 100px 20px 80px;
+}
+#page2.active {
+  display: block;
+}
+#page2.anim-in {
+  animation: page2FadeIn 0.5s ease forwards;
+}
+@keyframes page2FadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+#page1.hidden {
+  display: none !important;
+}
+.form-page-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.form-page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.form-page-title span {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.form-page-sub {
+  text-align: center;
+  font-size: .88rem;
+  color: var(--white-dim);
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+.anketa-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-field label {
+  font-size: .84rem;
+  font-weight: 500;
+  color: var(--gold-light);
+  letter-spacing: .02em;
+  line-height: 1.5;
+}
+.form-field .req {
+  color: var(--gold);
+}
+.form-field input,
+.form-field textarea {
+  background: rgba(13,59,46,0.35);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-family: 'Raleway', sans-serif;
+  font-size: .88rem;
+  color: var(--gold-light);
+  outline: none;
+  transition: border-color .3s, background .3s;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(201,168,76,0.3);
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  background: rgba(13,59,46,0.55);
+}
+.form-submit-btn {
+  margin-top: 12px;
+  padding: 18px 44px;
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold), #8a6010);
+  border: none;
+  border-radius: 50px;
+  font-family: 'Raleway', sans-serif;
+  font-size: .88rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--black);
+  cursor: pointer;
+  transition: all .35s;
+  box-shadow: 0 10px 36px rgba(201,168,76,0.35);
+  align-self: center;
+  width: 100%;
+  max-width: 340px;
+}
+.form-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 54px rgba(201,168,76,0.45);
+}
+.form-back-btn {
+  background: transparent;
+  border: none;
+  border-radius: 50px;
+  color: var(--white-dim);
+  font-family: 'Raleway', sans-serif;
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px 24px;
+  align-self: center;
+  transition: all .3s;
+  margin-bottom: 8px;
+}
+.form-back-btn:hover {
+  color: var(--gold-light);
+}
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 60px 20px;
+}
+.form-success.show {
+  display: block;
+}
+.form-success-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.form-success h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--gold-light);
+  margin-bottom: 12px;
+}
+.form-success p {
+  font-size: .9rem;
+  color: var(--white-dim);
+  line-height: 1.75;
+}
+@media (max-width: 767px) {
+  #page2 {
+    padding: 80px 16px 60px;
+  }
+  .form-submit-btn {
+    max-width: 100%;
+  }
+}
+
 </style>
 </head>
 <body>
 
-<!-- LOADER -->
+<div id="page1">
+
 <div id="loader">
   <div class="loader-name">Elena Bykova</div>
   <div class="loader-bar"><div class="loader-progress"></div></div>
 </div>
 
-<!-- CURSOR -->
 <div id="cursor-dot"></div>
 <div class="noise"></div>
 <canvas id="canvas-bg"></canvas>
 
-<!-- NAV -->
 <nav id="navbar">
   <div class="nav-logo">Elena Bykova</div>
   <ul class="nav-links">
@@ -985,7 +1284,6 @@ footer {
   <button class="nav-cta" onclick="scrollToForm()">Хочу в команду</button>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-left">
     <h1 class="hero-title">Elena<br>Bykova</h1>
@@ -995,12 +1293,10 @@ footer {
     </div>
   </div>
   <div class="hero-right">
-    <img src="photo.jpg" alt="Elena Bykova" class="hero-photo-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-    <div class="hero-photo-full-placeholder" style="display:none"><span>photo.jpg</span></div>
+    <img src="photo_hero.jpg" alt="Elena Bykova" class="hero-photo-full">
   </div>
 </section>
 
-<!-- MARQUEE -->
 <div class="marquee-strip">
   <div class="marquee-track">
     <span class="marquee-item">VIP-знижки до 50%</span>
@@ -1022,7 +1318,64 @@ footer {
   </div>
 </div>
 
-<!-- FORMATS -->
+<section class="selection" id="benefits" style="background: var(--black2); padding: 80px 0 40px;">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <h2 class="section-title">Що ви <span>отримаєте?</span></h2>
+    </div>
+    <div class="selection-grid">
+      
+      <div class="select-card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>Бізнес Платформа</h3>
+        <p>Готова система для роботи 24/7 та повна автоматизація всіх бізнес-процесів.</p>
+      </div>
+
+      <div class="select-card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Навчання та Підтримка</h3>
+        <p>Покрокові інструкції, закриті чати та персональний супровід від топ-лідерів команди.</p>
+      </div>
+
+      <div class="select-card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3>Високий Дохід</h3>
+        <p>Прозора система виплат та реальна можливість вийти на стабільний прибуток вже з першого місяця.</p>
+      </div>
+
+      <div class="select-card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Вільний Графік</h3>
+        <p>Ви самі керуєте своїм часом. Працюйте тоді, коли зручно, з будь-якої точки світу.</p>
+      </div>
+
+      <div class="select-card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Якісний Продукт</h3>
+        <p>Доступ до сертифікованої преміум-продукції, яка має величезний попит та довіру клієнтів.</p>
+      </div>
+
+      <div class="select-card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Подорожі та Бонуси</h3>
+        <p>Автопрограма, подорожі в екзотичні країни та цінні подарунки за ваші досягнення.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="formats">
   <div class="section-wrap">
     <div class="section-header reveal">
@@ -1033,7 +1386,6 @@ footer {
         <span class="format-badge badge-new">Популярне</span>
         <div class="format-number">01</div>
         <h3>VIP-Клієнт</h3>
-        <p>[Ваш текст]</p>
         <ul class="format-perks">
           <li>Знижка від 28% до 50% на всі продукти</li>
           <li>Доступ до закритого каталогу</li>
@@ -1046,7 +1398,6 @@ footer {
         <span class="format-badge badge-hot">Топ вибір</span>
         <div class="format-number">02</div>
         <h3>Партнер</h3>
-        <p>[Ваш текст]</p>
         <ul class="format-perks">
           <li>Всі переваги VIP-клієнта</li>
           <li>Відсоток від особистих продажів</li>
@@ -1059,7 +1410,6 @@ footer {
       <div class="format-card reveal">
         <div class="format-number">03</div>
         <h3>Б'юті-Спеціаліст</h3>
-        <p>[Ваш текст]</p>
         <ul class="format-perks">
           <li>Спеціальні умови для майстрів</li>
           <li>Продуктова підготовка</li>
@@ -1074,7 +1424,6 @@ footer {
 
 <div class="divider-ornament"><span>✦</span></div>
 
-<!-- WHO -->
 <section id="who">
   <div class="section-wrap">
     <div class="section-header reveal">
@@ -1084,37 +1433,37 @@ footer {
       <div class="who-card reveal">
         <div class="who-emoji-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><polygon points="12 2 19 8 12 22 5 8 12 2"/><line x1="5" y1="8" x2="19" y2="8"/></svg></div>
         <h3>Б'юті-спеціалісти</h3>
-        <p>[Ваш текст]</p>
+        <p></p>
         <span class="who-tag">Доп. дохід з клієнтів</span>
       </div>
       <div class="who-card reveal">
         <div class="who-emoji-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/></svg></div>
         <h3>Мами в декреті</h3>
-        <p>[Ваш текст]</p>
+        <p></p>
         <span class="who-tag">Гнучкий графік</span>
       </div>
       <div class="who-card reveal wide">
         <div class="who-emoji-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg></div>
         <h3>Ті, хто хоче більше</h3>
-        <p>[Ваш текст]</p>
+        <p></p>
         <span class="who-tag">Необмежений дохід</span>
       </div>
       <div class="who-card reveal">
         <div class="who-emoji-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><path d="M2 22c1.25-1.25 2.5-2.5 3.5-4C7 16 7.5 14 8 12c.5-2 1-4 3-6 2.5-2.5 6-4 11-4-2 5-4 8.5-6.5 11S10 17 2 22z"/><path d="M13 11 2 22"/></svg></div>
         <h3>Любителі якості</h3>
-        <p>[Ваш текст]</p>
+        <p></p>
         <span class="who-tag">Якість без переплат</span>
       </div>
       <div class="who-card reveal">
         <div class="who-emoji-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
         <h3>Блогери та SMM</h3>
-        <p>[Ваш текст]</p>
+        <p></p>
         <span class="who-tag">Монетизація аудиторії</span>
       </div>
       <div class="who-card reveal">
         <div class="who-emoji-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
         <h3>Студенти</h3>
-        <p>[Ваш текст]</p>
+        <p></p>
         <span class="who-tag">Без досвіду</span>
       </div>
     </div>
@@ -1123,7 +1472,6 @@ footer {
 
 <div class="divider"></div>
 
-<!-- PRODUCTS -->
 <section id="products">
   <div class="section-wrap">
     <div class="section-header reveal">
@@ -1132,25 +1480,25 @@ footer {
     <div class="products-carousel">
       <div class="product-card reveal">
         <div class="product-img">
-          <img src="product1.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="product1.jpg" alt="Продукт 1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="product-placeholder" style="display:none">product1.jpg</div>
         </div>
       </div>
       <div class="product-card reveal">
         <div class="product-img">
-          <img src="product2.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="product2.jpg" alt="Продукт 2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="product-placeholder" style="display:none">product2.jpg</div>
         </div>
       </div>
       <div class="product-card reveal">
         <div class="product-img">
-          <img src="product3.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="product3.jpg" alt="Продукт 3" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="product-placeholder" style="display:none">product3.jpg</div>
         </div>
       </div>
       <div class="product-card reveal">
         <div class="product-img">
-          <img src="product4.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="product4.jpg" alt="Продукт 4" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="product-placeholder" style="display:none">product4.jpg</div>
         </div>
       </div>
@@ -1160,25 +1508,23 @@ footer {
 
 <div class="divider-ornament"><span>✦</span></div>
 
-<!-- STEPS -->
 <section id="steps">
   <div class="section-wrap">
     <div class="section-header reveal">
       <h2 class="section-title">Як <span>Розпочати</span></h2>
     </div>
     <div class="steps-timeline">
-      <div class="step-item"><div class="step-num">01</div><div class="step-content"><h3>Залишаєш заявку</h3><p>[Ваш текст]</p></div></div>
-      <div class="step-item"><div class="step-num">02</div><div class="step-content"><h3>Безкоштовна консультація</h3><p>[Ваш текст]</p></div></div>
-      <div class="step-item"><div class="step-num">03</div><div class="step-content"><h3>Обираєш свій формат</h3><p>[Ваш текст]</p></div></div>
-      <div class="step-item"><div class="step-num">04</div><div class="step-content"><h3>Навчання та старт</h3><p>[Ваш текст]</p></div></div>
-      <div class="step-item"><div class="step-num">05</div><div class="step-content"><h3>Результат і зростання</h3><p>[Ваш текст]</p></div></div>
+      <div class="step-item"><div class="step-num">01</div><div class="step-content"><h3>Залишаєш заявку</h3><p></p></div></div>
+      <div class="step-item"><div class="step-num">02</div><div class="step-content"><h3>Безкоштовна консультація</h3><p></p></div></div>
+      <div class="step-item"><div class="step-num">03</div><div class="step-content"><h3>Обираєш свій формат</h3><p></p></div></div>
+      <div class="step-item"><div class="step-num">04</div><div class="step-content"><h3>Навчання та старт</h3><p></p></div></div>
+      <div class="step-item"><div class="step-num">05</div><div class="step-content"><h3>Результат і зростання</h3><p></p></div></div>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="section-wrap">
     <div class="section-header reveal">
@@ -1186,37 +1532,30 @@ footer {
     </div>
     <div class="testimonials-grid">
       <div class="testimonial-card reveal">
-        <img src="review1.jpg" alt="" onerror="this.outerHTML='<div style=padding:40px;text-align:center;color:var(--gold)>М</div>'">
+        <img src="review1.jpg" alt="Відгук 1" style="width:100%;height:auto;display:block;border-radius:10px;" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div style=padding:40px;text-align:center;color:var(--gold)>М</div>')">
       </div>
       <div class="testimonial-card reveal">
-        <img src="review2.jpg" alt="" onerror="this.outerHTML='<div style=padding:40px;text-align:center;color:var(--gold)>В</div>'">
+        <img src="review2.jpg" alt="Відгук 2" style="width:100%;height:auto;display:block;border-radius:10px;" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div style=padding:40px;text-align:center;color:var(--gold)>В</div>')">
       </div>
       <div class="testimonial-card reveal">
-        <img src="review3.jpg" alt="" onerror="this.outerHTML='<div style=padding:40px;text-align:center;color:var(--gold)>К</div>'">
+        <img src="review3.jpg" alt="Відгук 3" style="width:100%;height:auto;display:block;border-radius:10px;" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div style=padding:40px;text-align:center;color:var(--gold)>К</div>')">
       </div>
     </div>
   </div>
 </section>
 
-
-
-<!-- FORM -->
 <section id="form-section">
   <div class="section-wrap">
     <div class="section-header reveal">
       <h2 class="section-title">Залишити <span>Заявку</span></h2>
       <p class="section-desc">Натисни кнопку нижче — заповни коротку анкету, і я зв'яжусь з тобою найближчим часом 💛</p>
     </div>
-
     <div class="form-cta-block reveal" id="main-form">
-
-      <a href="ВСТАВТЕ_ПОСИЛАННЯ_GOOGLE_ФОРМИ_ТУТ" target="_blank" class="form-open-btn">
+      <button onclick="goToAnketa()" class="form-open-btn">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        Відкрити анкету ✦
-      </a>
-
-      <p class="form-cta-note">Форма відкриється в новій вкладці · Займе 2 хвилини</p>
-
+        Далі ✦
+      </button>
+      <p class="form-cta-note">Займе 5 хвилин · Я зв'яжусь з тобою особисто</p>
       <div class="form-contacts">
         <a href="https://instagram.com/elenaaa_bykova" target="_blank" class="contact-item">
           <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#000"/></svg></div>
@@ -1227,15 +1566,10 @@ footer {
           <div class="contact-info"><strong>Telegram</strong><span>@Len4iiiKkk</span></div>
         </a>
       </div>
-
-      <div class="gform-hint">
-        ⚠️ Щоб кнопка вела на вашу форму — замініть <code>ВСТАВТЕ_ПОСИЛАННЯ_GOOGLE_ФОРМИ_ТУТ</code> на посилання з Google Forms
-      </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -1276,25 +1610,124 @@ footer {
   </div>
 </footer>
 
+</div><div id="page2">
+  <nav id="navbar2" style="position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;backdrop-filter:blur(20px);background:rgba(4,8,10,0.9);border-bottom:none;">
+    <div class="nav-logo">Elena Bykova</div>
+    <button class="form-back-btn" onclick="goBack()" style="margin:0;">← Назад</button>
+  </nav>
+  <div class="form-page-wrap">
+    <div id="form-content">
+      <h1 class="form-page-title">Заповніть <span>анкету</span></h1>
+      <p class="form-page-sub">і я з вами звʼяжусь 💛</p>
+      <form class="anketa-form" id="anketa" onsubmit="submitForm(event)">
+        <div class="form-field">
+          <label for="q0">Прізвище та імʼя <span class="req">*</span></label>
+          <input type="text" id="q0" name="q0" placeholder="Ваша відповідь..." required>
+        </div>
+        <div class="form-field">
+          <label for="q1">Ваш контакт для зв'язку: телефон/instagram/telegram <span class="req">*</span></label>
+          <input type="text" id="q1" name="q1" placeholder="Ваша відповідь..." required>
+        </div>
+        <div class="form-field">
+          <label for="q2">Місто проживання <span class="req">*</span></label>
+          <input type="text" id="q2" name="q2" placeholder="Ваша відповідь..." required>
+        </div>
+        <div class="form-field">
+          <label for="q3">Місце роботи /посада <span class="req">*</span></label>
+          <input type="text" id="q3" name="q3" placeholder="Ваша відповідь..." required>
+        </div>
+        <div class="form-field">
+          <label for="q4">Поточний дохід в місяц <span class="req">*</span></label>
+          <input type="text" id="q4" name="q4" placeholder="Ваша відповідь..." required>
+        </div>
+        <div class="form-field">
+          <label for="q5">В якій точці власного життя по ваших відчуттях ви знаходитесь? Що викликає у вас розчарування та невдоволення і чим ви пишаєтесь чи задоволені? <span class="req">*</span></label>
+          <textarea id="q5" name="q5" placeholder="Ваша відповідь..." required rows="3"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="q6">Як би ви описали свою роботу, її роль у вашому житті? Що вас у поточній діяльності не влаштовує? <span class="req">*</span></label>
+          <textarea id="q6" name="q6" placeholder="Ваша відповідь..." required rows="3"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="q7">Шо хотілось би змінити в житті? <span class="req">*</span></label>
+          <textarea id="q7" name="q7" placeholder="Ваша відповідь..." required rows="3"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="q8">Яка ваша реальна мрія? <span class="req">*</span></label>
+          <textarea id="q8" name="q8" placeholder="Ваша відповідь..." required rows="3"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="q9">Як ви ставитесь до мережевого маркетингу? Вірите у перспективу, не довіряєте, зі скепсисом чи навпаки захопленням? <span class="req">*</span></label>
+          <textarea id="q9" name="q9" placeholder="Ваша відповідь..." required rows="3"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="q10">Які є причини недовіри та які упередження до мережевого? <span class="req">*</span></label>
+          <textarea id="q10" name="q10" placeholder="Ваша відповідь..." required rows="3"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="q11">Чи є досвід роботи з іншими компаніями? Негативний чи позитивний і чому? <span class="req">*</span></label>
+          <textarea id="q11" name="q11" placeholder="Ваша відповідь..." required rows="3"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="q12">Що хотіли б отримати в роботі зі мною? <span class="req">*</span></label>
+          <textarea id="q12" name="q12" placeholder="Ваша відповідь..." required rows="3"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="q13">Який формат співпраці був би для вас найбільш комфортний? <span class="req">*</span></label>
+          <input type="text" id="q13" name="q13" placeholder="Ваша відповідь..." required>
+        </div>
+        <div class="form-field">
+          <label for="q14">Скільки хотілось би заробляти на місяць для комфортного життя? <span class="req">*</span></label>
+          <input type="text" id="q14" name="q14" placeholder="Ваша відповідь..." required>
+        </div>
+        <div class="form-field">
+          <label for="q15">Скільки годин готови приділяти роботі? <span class="req">*</span></label>
+          <input type="text" id="q15" name="q15" placeholder="Ваша відповідь..." required>
+        </div>
+        <div class="form-field">
+          <label for="q16">Як швидко хотіли би вийти на бажаний дохід? <span class="req">*</span></label>
+          <textarea id="q16" name="q16" placeholder="Ваша відповідь..." required rows="3"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="q17">Чи є сумніви, що у вас може не вийти побудувати цей бізнес? Якщо є то які? <span class="req">*</span></label>
+          <textarea id="q17" name="q17" placeholder="Ваша відповідь..." required rows="3"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="q18">Що для вас важливо в роботі зі мною? <span class="req">*</span></label>
+          <textarea id="q18" name="q18" placeholder="Ваша відповідь..." required rows="3"></textarea>
+        </div>
+        <button type="button" class="form-back-btn" onclick="goBack()">← Повернутись назад</button>
+        <button type="submit" class="form-submit-btn">Надіслати анкету ✦</button>
+      </form>
+    </div>
+    <div class="form-success" id="form-success">
+      <div class="form-success-icon">✦</div>
+      <h3>Дякую!</h3>
+      <p>Анкету отримано.<br>Я зв'яжусь з тобою найближчим часом 💛</p>
+    </div>
+  </div>
+</div>
+
 <script>
-/* LOADER */
 window.addEventListener('load', () => {
   setTimeout(() => { document.getElementById('loader').classList.add('hidden'); }, 1600);
 });
 
-/* CURSOR */
 const dot = document.getElementById('cursor-dot');
 document.addEventListener('mousemove', e => {
   dot.style.left = e.clientX + 'px';
   dot.style.top = e.clientY + 'px';
 });
 
-/* PARTICLES */
 const canvas = document.getElementById('canvas-bg');
 const ctx = canvas.getContext('2d');
 let W, H;
-function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
-resize(); window.addEventListener('resize', resize);
+function resize() { 
+  W = canvas.width = window.innerWidth; 
+  H = canvas.height = window.innerHeight;
+}
+resize(); 
+window.addEventListener('resize', resize);
 
 class Particle {
   constructor() { this.reset(true); }
@@ -1328,13 +1761,12 @@ class Particle {
   }
 }
 
-/* fewer particles on mobile for performance */
 const count = window.innerWidth < 768 ? 80 : 160;
 const particles = [];
 for (let i = 0; i < count; i++) particles.push(new Particle());
 
 function drawConnections() {
-  if (window.innerWidth < 600) return; /* skip on small screens */
+  if (window.innerWidth < 600) return;
   for (let i = 0; i < particles.length; i++) {
     for (let j = i + 1; j < particles.length; j++) {
       const dx = particles[i].x - particles[j].x;
@@ -1360,12 +1792,10 @@ function animParticles() {
 }
 animParticles();
 
-/* NAVBAR */
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', scrollY > 60);
 });
 
-/* REVEAL */
 const revealEls = document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.step-item');
 const revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -1374,14 +1804,12 @@ const revealObs = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 revealEls.forEach(el => revealObs.observe(el));
 
-/* stagger */
 document.querySelectorAll('.formats-grid .format-card').forEach((c, i) => c.style.transitionDelay = `${i * 0.12}s`);
 document.querySelectorAll('.who-bento .who-card').forEach((c, i) => c.style.transitionDelay = `${i * 0.08}s`);
 document.querySelectorAll('.products-carousel .product-card').forEach((c, i) => c.style.transitionDelay = `${i * 0.1}s`);
 document.querySelectorAll('.testimonials-grid .testimonial-card').forEach((c, i) => c.style.transitionDelay = `${i * 0.12}s`);
 document.querySelectorAll('.step-item').forEach((c, i) => c.style.transitionDelay = `${i * 0.13}s`);
 
-/* FAQ */
 function toggleFaq(el) {
   const item = el.closest('.faq-item');
   const isOpen = item.classList.contains('open');
@@ -1389,12 +1817,59 @@ function toggleFaq(el) {
   if (!isOpen) item.classList.add('open');
 }
 
-/* SCROLL TO FORM */
-function scrollToForm() {
-  document.getElementById('main-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+function goToAnketa() {
+  document.getElementById('page1').classList.add('hidden');
+  var p2 = document.getElementById('page2');
+  p2.classList.add('active');
+  p2.classList.remove('anim-in');
+  requestAnimationFrame(function() {
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    requestAnimationFrame(function() {
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      p2.classList.add('anim-in');
+      var fields = p2.querySelectorAll('.form-field');
+      fields.forEach(function(f, i) {
+        f.style.opacity = '0';
+        f.style.transform = 'translateY(20px)';
+        setTimeout(function() {
+          f.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          f.style.opacity = '1';
+          f.style.transform = 'none';
+        }, 120 + i * 55);
+      });
+      var title = p2.querySelector('.form-page-title');
+      var sub = p2.querySelector('.form-page-sub');
+      if(title) { title.style.opacity='0'; title.style.transform='translateY(-16px)';
+      setTimeout(function(){ title.style.transition='opacity .6s ease, transform .6s ease'; title.style.opacity='1'; title.style.transform='none'; }, 60); }
+      if(sub) { sub.style.opacity='0';
+      setTimeout(function(){ sub.style.transition='opacity .6s ease .15s'; sub.style.opacity='1'; }, 80);
+      }
+    });
+  });
 }
 
-/* SMOOTH NAV */
+function goBack() {
+  document.getElementById('page2').classList.remove('active');
+  document.getElementById('page2').classList.remove('anim-in');
+  document.getElementById('page1').classList.remove('hidden');
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
+
+function submitForm(e) {
+  e.preventDefault();
+  document.getElementById('anketa').style.display = 'none';
+  document.getElementById('form-success').classList.add('show');
+  window.scrollTo(0, 0);
+}
+
+function scrollToForm() {
+  goToAnketa();
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
@@ -1403,7 +1878,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* PARALLAX - desktop only */
 if (window.innerWidth > 768) {
   window.addEventListener('scroll', () => {
     const hero = document.getElementById('hero');
@@ -1411,7 +1885,6 @@ if (window.innerWidth > 768) {
   });
 }
 
-/* MAGNETIC BUTTONS - desktop only */
 if (window.matchMedia('(hover: hover)').matches) {
   document.querySelectorAll('.btn-primary,.btn-ghost,.nav-cta,.format-cta,.submit-btn').forEach(btn => {
     btn.addEventListener('mousemove', e => {
