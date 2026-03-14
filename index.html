@@ -1209,6 +1209,11 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 18px 54px rgba(201,168,76,0.45);
 }
+.form-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
 .form-back-btn {
   background: transparent;
   border: none;
@@ -1622,82 +1627,84 @@ footer {
       <form class="anketa-form" id="anketa" onsubmit="submitForm(event)">
         <div class="form-field">
           <label for="q0">Прізвище та імʼя <span class="req">*</span></label>
-          <input type="text" id="q0" name="q0" placeholder="Ваша відповідь..." required>
+          <input type="text" id="q0" name="name" placeholder="Ваша відповідь..." required>
         </div>
         <div class="form-field">
           <label for="q1">Ваш контакт для зв'язку: телефон/instagram/telegram <span class="req">*</span></label>
-          <input type="text" id="q1" name="q1" placeholder="Ваша відповідь..." required>
+          <input type="text" id="q1" name="contact" placeholder="Ваша відповідь..." required>
         </div>
         <div class="form-field">
           <label for="q2">Місто проживання <span class="req">*</span></label>
-          <input type="text" id="q2" name="q2" placeholder="Ваша відповідь..." required>
+          <input type="text" id="q2" name="city" placeholder="Ваша відповідь..." required>
         </div>
         <div class="form-field">
           <label for="q3">Місце роботи /посада <span class="req">*</span></label>
-          <input type="text" id="q3" name="q3" placeholder="Ваша відповідь..." required>
+          <input type="text" id="q3" name="job" placeholder="Ваша відповідь..." required>
         </div>
         <div class="form-field">
           <label for="q4">Поточний дохід в місяц <span class="req">*</span></label>
-          <input type="text" id="q4" name="q4" placeholder="Ваша відповідь..." required>
+          <input type="text" id="q4" name="current_income" placeholder="Ваша відповідь..." required>
         </div>
         <div class="form-field">
           <label for="q5">В якій точці власного життя по ваших відчуттях ви знаходитесь? Що викликає у вас розчарування та невдоволення і чим ви пишаєтесь чи задоволені? <span class="req">*</span></label>
-          <textarea id="q5" name="q5" placeholder="Ваша відповідь..." required rows="3"></textarea>
+          <textarea id="q5" name="life_point" placeholder="Ваша відповідь..." required rows="3"></textarea>
         </div>
         <div class="form-field">
           <label for="q6">Як би ви описали свою роботу, її роль у вашому житті? Що вас у поточній діяльності не влаштовує? <span class="req">*</span></label>
-          <textarea id="q6" name="q6" placeholder="Ваша відповідь..." required rows="3"></textarea>
+          <textarea id="q6" name="work_description" placeholder="Ваша відповідь..." required rows="3"></textarea>
         </div>
         <div class="form-field">
           <label for="q7">Шо хотілось би змінити в житті? <span class="req">*</span></label>
-          <textarea id="q7" name="q7" placeholder="Ваша відповідь..." required rows="3"></textarea>
+          <textarea id="q7" name="want_to_change" placeholder="Ваша відповідь..." required rows="3"></textarea>
         </div>
         <div class="form-field">
           <label for="q8">Яка ваша реальна мрія? <span class="req">*</span></label>
-          <textarea id="q8" name="q8" placeholder="Ваша відповідь..." required rows="3"></textarea>
+          <textarea id="q8" name="dream" placeholder="Ваша відповідь..." required rows="3"></textarea>
         </div>
         <div class="form-field">
           <label for="q9">Як ви ставитесь до мережевого маркетингу? Вірите у перспективу, не довіряєте, зі скепсисом чи навпаки захопленням? <span class="req">*</span></label>
-          <textarea id="q9" name="q9" placeholder="Ваша відповідь..." required rows="3"></textarea>
+          <textarea id="q9" name="mlm_attitude" placeholder="Ваша відповідь..." required rows="3"></textarea>
         </div>
         <div class="form-field">
           <label for="q10">Які є причини недовіри та які упередження до мережевого? <span class="req">*</span></label>
-          <textarea id="q10" name="q10" placeholder="Ваша відповідь..." required rows="3"></textarea>
+          <textarea id="q10" name="mlm_doubts" placeholder="Ваша відповідь..." required rows="3"></textarea>
         </div>
         <div class="form-field">
           <label for="q11">Чи є досвід роботи з іншими компаніями? Негативний чи позитивний і чому? <span class="req">*</span></label>
-          <textarea id="q11" name="q11" placeholder="Ваша відповідь..." required rows="3"></textarea>
+          <textarea id="q11" name="previous_experience" placeholder="Ваша відповідь..." required rows="3"></textarea>
         </div>
         <div class="form-field">
           <label for="q12">Що хотіли б отримати в роботі зі мною? <span class="req">*</span></label>
-          <textarea id="q12" name="q12" placeholder="Ваша відповідь..." required rows="3"></textarea>
+          <textarea id="q12" name="expectations" placeholder="Ваша відповідь..." required rows="3"></textarea>
         </div>
         <div class="form-field">
           <label for="q13">Який формат співпраці був би для вас найбільш комфортний? <span class="req">*</span></label>
-          <input type="text" id="q13" name="q13" placeholder="Ваша відповідь..." required>
+          <input type="text" id="q13" name="cooperation_format" placeholder="Ваша відповідь..." required>
         </div>
         <div class="form-field">
           <label for="q14">Скільки хотілось би заробляти на місяць для комфортного життя? <span class="req">*</span></label>
-          <input type="text" id="q14" name="q14" placeholder="Ваша відповідь..." required>
+          <input type="text" id="q14" name="desired_income" placeholder="Ваша відповідь..." required>
         </div>
         <div class="form-field">
           <label for="q15">Скільки годин готови приділяти роботі? <span class="req">*</span></label>
-          <input type="text" id="q15" name="q15" placeholder="Ваша відповідь..." required>
+          <input type="text" id="q15" name="hours_per_day" placeholder="Ваша відповідь..." required>
         </div>
         <div class="form-field">
           <label for="q16">Як швидко хотіли би вийти на бажаний дохід? <span class="req">*</span></label>
-          <textarea id="q16" name="q16" placeholder="Ваша відповідь..." required rows="3"></textarea>
+          <textarea id="q16" name="income_timeline" placeholder="Ваша відповідь..." required rows="3"></textarea>
         </div>
         <div class="form-field">
           <label for="q17">Чи є сумніви, що у вас може не вийти побудувати цей бізнес? Якщо є то які? <span class="req">*</span></label>
-          <textarea id="q17" name="q17" placeholder="Ваша відповідь..." required rows="3"></textarea>
+          <textarea id="q17" name="doubts" placeholder="Ваша відповідь..." required rows="3"></textarea>
         </div>
         <div class="form-field">
           <label for="q18">Що для вас важливо в роботі зі мною? <span class="req">*</span></label>
-          <textarea id="q18" name="q18" placeholder="Ваша відповідь..." required rows="3"></textarea>
+          <textarea id="q18" name="important_in_work" placeholder="Ваша відповідь..." required rows="3"></textarea>
         </div>
+        <!-- hidden field for Formspree subject -->
+        <input type="hidden" name="_subject" value="Нова анкета від кандидата — Elena Bykova">
         <button type="button" class="form-back-btn" onclick="goBack()">← Повернутись назад</button>
-        <button type="submit" class="form-submit-btn">Надіслати анкету ✦</button>
+        <button type="submit" class="form-submit-btn" id="submit-btn">Надіслати анкету ✦</button>
       </form>
     </div>
     <div class="form-success" id="form-success">
@@ -1859,11 +1866,36 @@ function goBack() {
   document.body.scrollTop = 0;
 }
 
-function submitForm(e) {
+async function submitForm(e) {
   e.preventDefault();
-  document.getElementById('anketa').style.display = 'none';
-  document.getElementById('form-success').classList.add('show');
-  window.scrollTo(0, 0);
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Надсилання...';
+
+  const form = document.getElementById('anketa');
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch('https://formspree.io/f/xbdzkowd', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      document.getElementById('anketa').style.display = 'none';
+      document.getElementById('form-success').classList.add('show');
+      window.scrollTo(0, 0);
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Надіслати анкету ✦';
+      alert('Помилка надсилання. Спробуйте ще раз або напишіть нам в Instagram / Telegram.');
+    }
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = 'Надіслати анкету ✦';
+    alert('Помилка надсилання. Перевірте інтернет-з\'єднання та спробуйте ще раз.');
+  }
 }
 
 function scrollToForm() {
